@@ -89,6 +89,7 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'    # URL для шаблонов
+STATIC_ROOT = '/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static',    # "Поисковики" статики. Ищет статику в STATICFILES_DIRS.
 ]
