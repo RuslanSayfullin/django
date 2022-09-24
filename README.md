@@ -1,0 +1,2 @@
+# django_ninja_rest_framework
+Пишем гибридное приложение для хранения заметок на Django, Django Ninja REST Framework и Alpine.js. Cоздаkb гибридное приложение Notes, которое опирается на базовую функциональность Django. Помимо Джанго, приложение использetn:      Фреймворк Django Ninja для API и CRUD.     Библиотеку Axios – для HTTP-запросов к бэкенду.   Ультралегкий JS-фреймворк Alpine.js и CSS-фреймворк Bootstrap – для фронтенда.
