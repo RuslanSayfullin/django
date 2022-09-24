@@ -2,11 +2,11 @@ from django.contrib import admin
 from django.conf.urls.static import static
 from config import settings_db_debug, settings
 from django.urls import path, include
-#from notes.api import api
+from notes.api import api
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path("api/", api.urls),
+    path("api/", api.urls),
     path('', include('notes.urls')),
 ]
 
