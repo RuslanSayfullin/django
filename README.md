@@ -1,12 +1,24 @@
 _разработка Sayfullin R.R.
 Инструкция актуальна для Linux-систем.
 
-Используемые технологии: python~=3.9 Django~=4.1 PostgreSQL
+Используемые технологии: python~=3.11 Django~=5.0 PostgreSQL
 
-Скопируйте репозиторий с помощью команды: $ git clone https://github.com/RuslanSayfullin/reckoning.git Перейдите в основную директорию с помощью команды: $ cd reckoning
+Скопируйте репозиторий с помощью команды: 
+    $ git clone https://github.com/RuslanSayfullin/django.git 
+
+Перейдите в основную директорию с помощью команды:
+    $ cd django
+
 Создать и активировать виртуальное окружение:
+    $ poetry env use python3.9
+Установить зависимости:
+    $ poetry install 
+Сохранить, адрес созданного виртуального окружения из вывода(рекомендуется):
+    $ poetry shell (web-py3.9) 
+$ Выход:
+    $ exit
 
-$ poetry env use python3.9 Установить зависимости: $ poetry install Сохранить, адрес созданного виртуального окружения из вывода(рекомендуется) $ poetry shell (web-py3.9) $ Выход: $ exit
+
 Добавить в директорию reckoning/backend файл psw.py
 
 В данный файл, необходимо добавить две переменные:
