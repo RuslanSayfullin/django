@@ -4,7 +4,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.http import Http404
 
 from django.views.generic import ListView
-
+from .forms import EmailPostForm
 
 def post_list(request):
     post_list = Post.published.all()
@@ -40,3 +40,17 @@ class PostListView(ListView):
     context_object_name = 'posts'
     paginate_by = 3
     template_name = 'blog/post/list.html'
+
+def post_share(request, post_id):
+    # Извлечь пост по идентификатору id
+    post = get_object_or_404(Post, id=post_id, status=Post.Status.PUBLISHED)
+    if request.method == 'POST':
+        # Форма была передана на обработку
+        form = EmailPostForm(request.POST)
+        if form.is_valid():
+            # Поля формы успешно прошли валидацию
+            cd = form.cleaned_data
+            # ... отправить электронное письмо
+    else:
+        form = EmailPostForm()
+    return render(request, 'blog/post/share.html', {'post': post, 'form': form})
